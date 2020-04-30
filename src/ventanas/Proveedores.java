@@ -35,7 +35,7 @@ public class Proveedores extends JFrame {
 	public Proveedores() {
 		setTitle("Gestión de proveedores");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 521, 264);
+		setBounds(100, 100, 521, 299);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -103,7 +103,30 @@ public class Proveedores extends JFrame {
 
 			}
 		});
-		btnVolverAlMen.setBounds(65, 187, 389, 29);
+		btnVolverAlMen.setBounds(65, 226, 389, 29);
 		contentPane.add(btnVolverAlMen);
+
+		JButton btnNewButton_4 = new JButton("LISTADO DE PROVEEDORES");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							ListadoProveedores1 lp = new ListadoProveedores1();
+
+							lp.setVisible(true);
+							dispose();
+
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+
+			}
+		});
+		btnNewButton_4.setBounds(65, 185, 379, 29);
+		contentPane.add(btnNewButton_4);
 	}
 }

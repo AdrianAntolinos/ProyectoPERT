@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -108,6 +109,35 @@ public class BBDDGestor {
 			desconectar();
 		}
 		return prov;
+	}
+
+	public ArrayList<Proveedor> consultarTodosProveedores() {
+		ArrayList<Proveedor> proveedores = new ArrayList<>();
+		conectar();
+		String sql = "SELECT * FROM PROV_COMP";
+		try {
+			PreparedStatement instruccion = conexion.prepareStatement(sql);
+			ResultSet filas = instruccion.executeQuery();
+
+			while (filas.next()) {
+				String cifaconsultar = filas.getString("CIF_PROVEEDOR");
+				String raz = filas.getString("RAZ_PROVEEDOR");
+				String reg = filas.getString("REG_NOTARIAL");
+				String segresponsabilidad = filas.getString("SEG_RESPONSABILIDAD");
+				double segimporte = filas.getDouble("SEG_IMPORTE");
+				java.sql.Date fecha = filas.getDate("FEC_HOMOLOGACIÓN");
+				java.util.Date fechautil = date_SQL_to_UTIL(fecha);
+				Proveedor prov = new Proveedor(cifaconsultar, raz, reg, segresponsabilidad, segimporte, fechautil);
+				proveedores.add(prov);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			desconectar();
+		}
+		return proveedores;
 	}
 
 	public void bajaProveedor(String cifqueborro) {

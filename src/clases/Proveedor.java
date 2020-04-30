@@ -2,13 +2,20 @@ package clases;
 
 import java.util.Date;
 
-public class Proveedor {
+import javax.xml.bind.annotation.XmlElement;
 
+public class Proveedor {
+	@XmlElement
 	private String cif_proveedor;
+	@XmlElement
 	private String raz_proveedor;
+	@XmlElement
 	private String reg_notarial;
+	@XmlElement
 	private String seg_responsabilidad;
+	@XmlElement
 	private double seg_importe;
+	@XmlElement
 	private Date fec_homologacion;
 
 	public Proveedor(String cif_proveedor, String raz_proveedor, String reg_notarial, String seg_responsabilidad,
