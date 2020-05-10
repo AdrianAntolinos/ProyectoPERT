@@ -19,7 +19,7 @@ import javax.swing.border.EmptyBorder;
 import clases.Proveedor;
 import modelo.BBDDGestor;
 
-public class Alta extends JFrame {
+public class AltaProveedor extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -38,7 +38,7 @@ public class Alta extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Alta frame = new Alta();
+					AltaProveedor frame = new AltaProveedor();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -50,7 +50,7 @@ public class Alta extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Alta() {
+	public AltaProveedor() {
 		setTitle("ALTA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 568, 264);
@@ -159,7 +159,7 @@ public class Alta extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Proveedores proveedores = new Proveedores();
+				GestionProveedores proveedores = new GestionProveedores();
 				proveedores.setVisible(true);
 				dispose();
 

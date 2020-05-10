@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class Proveedores extends JFrame {
+public class GestionProveedores extends JFrame {
 
 	private JPanel contentPane;
 
@@ -20,7 +20,7 @@ public class Proveedores extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Proveedores frame = new Proveedores();
+					GestionProveedores frame = new GestionProveedores();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,7 +32,7 @@ public class Proveedores extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Proveedores() {
+	public GestionProveedores() {
 		setTitle("Gestión de proveedores");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 521, 299);
@@ -45,7 +45,7 @@ public class Proveedores extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Alta alta = new Alta();
+				AltaProveedor alta = new AltaProveedor();
 				alta.setVisible(true);
 				dispose();
 
@@ -58,7 +58,7 @@ public class Proveedores extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Baja baja = new Baja();
+				BajaProveedor baja = new BajaProveedor();
 				baja.setVisible(true);
 				dispose();
 
@@ -71,7 +71,7 @@ public class Proveedores extends JFrame {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Modificar modificar = new Modificar();
+				ModificarProveedor modificar = new ModificarProveedor();
 				modificar.setVisible(true);
 				dispose();
 
@@ -84,7 +84,7 @@ public class Proveedores extends JFrame {
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Consultar consultar = new Consultar();
+				ConsultarProveedor consultar = new ConsultarProveedor();
 				consultar.setVisible(true);
 				dispose();
 
@@ -110,19 +110,9 @@ public class Proveedores extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-							ListadoProveedores1 lp = new ListadoProveedores1();
-
-							lp.setVisible(true);
-							dispose();
-
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					}
-				});
+				ListadoProveedores lp = new ListadoProveedores();
+				lp.setVisible(true);
+				dispose();
 
 			}
 		});

@@ -18,7 +18,7 @@ import javax.swing.border.EmptyBorder;
 import clases.Proveedor;
 import modelo.BBDDGestor;
 
-public class Consultar extends JFrame {
+public class ConsultarProveedor extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -36,7 +36,7 @@ public class Consultar extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Consultar frame = new Consultar();
+					ConsultarProveedor frame = new ConsultarProveedor();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +48,7 @@ public class Consultar extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Consultar() {
+	public ConsultarProveedor() {
 		setTitle("CONSULTAR");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 568, 308);
@@ -175,7 +175,7 @@ public class Consultar extends JFrame {
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Proveedores proveedores = new Proveedores();
+				GestionProveedores proveedores = new GestionProveedores();
 				proveedores.setVisible(true);
 				dispose();
 

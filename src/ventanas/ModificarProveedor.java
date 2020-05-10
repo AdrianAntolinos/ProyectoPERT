@@ -19,7 +19,7 @@ import javax.swing.border.EmptyBorder;
 import clases.Proveedor;
 import modelo.BBDDGestor;
 
-public class Modificar extends JFrame {
+public class ModificarProveedor extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -36,7 +36,7 @@ public class Modificar extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Modificar frame = new Modificar();
+					ModificarProveedor frame = new ModificarProveedor();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +48,7 @@ public class Modificar extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Modificar() {
+	public ModificarProveedor() {
 		setTitle("MODIFICAR");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 568, 319);
@@ -179,7 +179,7 @@ public class Modificar extends JFrame {
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Proveedores proveedores = new Proveedores();
+				GestionProveedores proveedores = new GestionProveedores();
 				proveedores.setVisible(true);
 				dispose();
 

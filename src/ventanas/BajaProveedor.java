@@ -14,7 +14,7 @@ import javax.swing.border.EmptyBorder;
 
 import modelo.BBDDGestor;
 
-public class Baja extends JFrame {
+public class BajaProveedor extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -26,7 +26,7 @@ public class Baja extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Baja frame = new Baja();
+					BajaProveedor frame = new BajaProveedor();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +38,7 @@ public class Baja extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Baja() {
+	public BajaProveedor() {
 		setTitle("BAJA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 181);
@@ -74,7 +74,7 @@ public class Baja extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Proveedores proveedores = new Proveedores();
+				GestionProveedores proveedores = new GestionProveedores();
 				proveedores.setVisible(true);
 				dispose();
 

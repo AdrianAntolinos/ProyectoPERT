@@ -45,7 +45,7 @@ public class Menu extends JFrame {
 		btnGestinDeProveedores.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Proveedores proveedores = new Proveedores();
+				GestionProveedores proveedores = new GestionProveedores();
 				proveedores.setVisible(true);
 				dispose();
 
@@ -54,11 +54,11 @@ public class Menu extends JFrame {
 		btnGestinDeProveedores.setBounds(34, 26, 386, 29);
 		panel.add(btnGestinDeProveedores);
 
-		JButton btnNewButton = new JButton("Gestión de ficheros");
+		JButton btnNewButton = new JButton("Gestión de facturas");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				Ficheros ficheros = new Ficheros();
+				GestionFacturas ficheros = new GestionFacturas();
 				ficheros.setVisible(true);
 				dispose();
 
