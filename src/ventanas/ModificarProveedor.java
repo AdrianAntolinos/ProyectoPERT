@@ -166,8 +166,9 @@ public class ModificarProveedor extends JFrame {
 					btnNewButton.setVisible(true);
 
 				} else {
-					JOptionPane.showMessageDialog(null, "No hay ningún proveedor con este cif", "ERROR",
-							JOptionPane.ERROR_MESSAGE);
+					// JOptionPane.showMessageDialog(null, "No hay ningún proveedor con este cif",
+					// "ERROR",
+					// JOptionPane.ERROR_MESSAGE);
 				}
 
 			}
@@ -212,8 +213,9 @@ public class ModificarProveedor extends JFrame {
 					BBDDGestor gestor = new BBDDGestor();
 					gestor.modificarProveedor(p);
 
-					JOptionPane.showMessageDialog(null, "Se ha modificado el proveedor correctamente", "INFORMACIÓN",
-							JOptionPane.INFORMATION_MESSAGE);
+					// JOptionPane.showMessageDialog(null, "Se ha modificado el proveedor
+					// correctamente", "INFORMACIÓN",
+					// JOptionPane.INFORMATION_MESSAGE);
 
 				}
 

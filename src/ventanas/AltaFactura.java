@@ -149,8 +149,9 @@ public class AltaFactura extends JFrame {
 					BBDDGestor gestor = new BBDDGestor();
 					gestor.altaFactura(f);
 
-					JOptionPane.showMessageDialog(null, "Se ha creado la factura correctamente", "INFORMACIÓN",
-							JOptionPane.INFORMATION_MESSAGE);
+					// JOptionPane.showMessageDialog(null, "Se ha creado la factura correctamente",
+					// "INFORMACIÓN",
+					// JOptionPane.INFORMATION_MESSAGE);
 				}
 
 			}

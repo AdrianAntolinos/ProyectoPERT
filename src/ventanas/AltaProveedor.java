@@ -145,8 +145,9 @@ public class AltaProveedor extends JFrame {
 					BBDDGestor gestor = new BBDDGestor();
 					gestor.altaProveedor(p);
 
-					JOptionPane.showMessageDialog(null, "Se ha dado de alta al proveedor correctamente", "INFORMACIÓN",
-							JOptionPane.INFORMATION_MESSAGE);
+					// JOptionPane.showMessageDialog(null, "Se ha dado de alta al proveedor
+					// correctamente", "INFORMACIÓN",
+					// JOptionPane.INFORMATION_MESSAGE);
 				}
 
 			}
